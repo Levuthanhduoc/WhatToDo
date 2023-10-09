@@ -6,7 +6,6 @@ function today(){
     target.addEventListener("click",()=>{
         _clearContent();
         _clearNav();
-        let nav = document.querySelector("#navigator");
         let date = getToday();
         if(!isDataExit(date)){
             emptyMessage();
@@ -14,6 +13,14 @@ function today(){
         }
         todoList(date);
         addToNav(date);
+    })
+}
+
+function upcoming(){
+    let target = document.querySelector("#upcoming");
+    target.addEventListener("click",()=>{
+        _clearContent();
+        _clearNav();
     })
 }
 

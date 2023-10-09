@@ -30,6 +30,16 @@ function getToday(){
     return `${year}-${month}-${day}`;
 }
 
+function getNextDay(){
+    let calendar = new Date();
+    let day = calendar.getDate(),month =calendar.getMonth() + 1, year = calendar.getFullYear();
+    if(Number(month) < 10){
+        month = `0${month}`;
+    }
+    day = Number(day) + 1;
+    if(day > 3  );
+}
+
 function selectedOnClick(target){
     target.addEventListener("click",(e)=>{
         _deSelectedAll(e.target.parentNode);
